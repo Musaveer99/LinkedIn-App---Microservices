@@ -1,5 +1,4 @@
-package com.linkedIn.posts_service.entity;
-
+package com.linkedIn.posts_service.entity;cle
 
 import jakarta.persistence.*;
 import lombok.Getter;
