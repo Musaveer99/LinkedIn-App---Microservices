@@ -1,13 +1,13 @@
 package com.posts_service.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
+@Data
+@Entity
 public class PostLike {
 
     @Id
@@ -23,5 +23,45 @@ public class PostLike {
     @CreationTimestamp
     private LocalDateTime likedAt;
 
+    public PostLike() {
+    }
 
+    public PostLike(Long id, Long postId, Long userId, LocalDateTime likedAt) {
+        this.id = id;
+        this.postId = postId;
+        this.userId = userId;
+        this.likedAt = likedAt;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getPostId() {
+        return postId;
+    }
+
+    public void setPostId(Long postId) {
+        this.postId = postId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public LocalDateTime getLikedAt() {
+        return likedAt;
+    }
+
+    public void setLikedAt(LocalDateTime likedAt) {
+        this.likedAt = likedAt;
+    }
 }

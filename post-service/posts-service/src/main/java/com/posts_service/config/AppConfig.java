@@ -1,6 +1,7 @@
 package com.posts_service.config;
 
 import org.modelmapper.ModelMapper;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,4 +13,5 @@ public class AppConfig {
 
         return new ModelMapper();
     }
+
 }
