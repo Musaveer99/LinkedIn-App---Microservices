@@ -1,0 +1,61 @@
+package com.posts_service.dto;
+
+import jakarta.persistence.Column;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
+
+@Data
+@Getter
+@Setter
+public class PostDto {
+    private Long id;
+    private String content;
+    private Long userId;
+    private LocalDateTime createdAt;
+
+    public Long getId() {
+        return id;
+    }
+
+    public PostDto() {
+    }
+
+    public PostDto(Long id, String content, Long userId, LocalDateTime createdAt) {
+        this.id = id;
+        this.content = content;
+        this.userId = userId;
+        this.createdAt = createdAt;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+}
